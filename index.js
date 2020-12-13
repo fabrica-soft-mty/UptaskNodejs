@@ -70,11 +70,9 @@ app.use((req, res, next) => {
 
 app.use('/', routes());
 
-//purto en el que arranca el servidor de desarrollo
-// app.listen(4000);
 // Puerto y host para la app
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || '3000';
 app.listen(port, host, () => {
-    console.log('El servidor esta funcionando')
+    console.log(`El servidor esta funcionando puerto ${port}`);
 });
